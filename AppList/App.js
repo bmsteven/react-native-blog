@@ -7,13 +7,11 @@ import store from './src/redux/store';
 import {connect} from 'react-redux';
 import {getPosts} from './src/redux/actions/data';
 import Icon from 'react-native-vector-icons/dist/MaterialIcons';
-// import Moment from "react-moment"
 
 const App = ({getPosts, data: {loading, posts}}) => {
   useEffect(() => {
     store.dispatch(getPosts);
   }, []);
-  // console.log(posts)
   return (
     <View style={styles.container}>
       <View style={styles.header}>
