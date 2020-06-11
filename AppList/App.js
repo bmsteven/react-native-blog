@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {View, ScrollView, Text, StyleSheet, FlatList} from 'react-native';
+import {View, ScrollView, Text, StyleSheet, FlatList, Button} from 'react-native';
 
 import PropTypes from 'prop-types';
 
@@ -46,7 +46,7 @@ const App = ({getPosts, data: {loading, posts}}) => {
                       {/* </Moment> */}
                     </View>
                     <Text style={styles.subtitle}>{item.subtitle}</Text>
-                    <Text style={styles.btn}>Read More -></Text>
+                    <Button style={styles.btn} text="Read More"/>
                   </View>
                 )}
               />
